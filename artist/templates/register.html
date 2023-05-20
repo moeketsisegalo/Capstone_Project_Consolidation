@@ -1,0 +1,103 @@
+<!--Extend the index.html template--> 
+{% extends 'index.html' %}
+<!--Start a content block -->
+{% block content %}
+<!--Internal style CSS for the register.html-->
+<style>
+    body {
+        background-image: url('https://www.dropbox.com/s/7j5whxqtfh14hub/shot-by-joe-kWnLO5B-X2s-unsplash.jpg?raw=1');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 50%;
+      margin: 0 auto;
+    }
+  
+    h1 {
+      text-align: center;
+    }
+  
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    label {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 100%;
+      font-size: 16px;
+    }
+  
+    button[type="submit"] {
+      background-color: lime;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+  
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <!--Heading for the registration form -->
+  <h1>Register</h1>
+  <!--Start of the form -->
+  <form method="post">
+    <!--Django tag to prevent Cross-Site Request Forgery -->
+    {% csrf_token %}
+    <!--div for the username field -->
+    <div>
+        <!--Label for the username field -->
+      <label for="username">Username:</label>
+      <!--Input field for the username -->
+      <input type="text" name="username" id="username">
+    </div>
+    <div>
+        <!--Label for email-->
+      <label for="email">Email:</label>
+      <!--input for email-->
+      <input type="email" name="email" id="email">
+    </div>
+    <div>
+        <!--label for password-->
+      <label for="password1">Password:</label>
+      <!--input for password-->
+      <input type="password" name="password1" id="password1">
+    </div>
+    <div>
+        <!--lable for confirm password-->
+      <label for="password2">Confirm password:</label>
+      <!--input for confrimation of password-->
+      <input type="password" name="password2" id="password2">
+    </div>
+    <!--Submit button for the form -->
+    <button type="submit">Register</button>
+    <!--End of the form-->
+  </form>
+<!--End of the content block--> 
+{% endblock %}

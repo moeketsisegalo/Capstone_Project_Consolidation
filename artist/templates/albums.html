@@ -1,0 +1,27 @@
+ <!-- Extends index template index.html -->
+{% extends 'index.html' %}
+<!-- Define content block -->
+{% block content %}
+<!-- Add a heading 'Albums' -->
+<h1>Albums</h1>
+<!-- Internal style CSS -->
+<style>
+    {% comment %} Add a style block to set the background image and text color  {% endcomment %}
+    body {
+        background-image: url('https://www.dropbox.com/s/3engbg3w7qdoz47/tatonomusic-t06xJHRFoYU-unsplash.jpg?raw=1');
+        background-size: cover;
+        color: white; /* Change text color to white */
+    }
+    </style>
+<ul>
+<!--Loop through each album in the 'albums' list -->
+{% for album in albums %}
+<!--Display the title and artist for each album -->
+<li>{{ album.title }} by {{ album.artist }}</li>
+{% endfor %}
+</ul>
+ <!-- End content block --> 
+{% endblock %}
+
+
+

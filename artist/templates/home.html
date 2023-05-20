@@ -1,0 +1,162 @@
+{% extends 'index.html' %}
+{% block title %}Home{% endblock %}
+<!-- Importing Font Awesome CSS library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% block content %}
+
+<style>
+    /* Internal CSS */ 
+
+    /* Styling for paragraphs */
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 20px 40px;
+      }
+    /* Styling for body */
+    body {
+        /* Setting a background image */
+        background-image: url("https://www.dropbox.com/s/yu62s4tpx0qwcwn/harry-swales-Vfvf3H-5OHc-unsplash.jpg?raw=1");
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+    }
+    /* Styling for image wrapper */
+    .image-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* Styling for images inside the wrapper */
+    .image-wrapper img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    /* Styling for divs inside the image wrapper */
+    .image-wrapper div {
+        width: 50%;
+        margin: 0 auto;
+    }
+    /* CSS for image hover effect */
+    img {
+        transition: transform 0.5s ease;
+    }
+    
+    img:hover {
+        transform: scale(1.05);
+    }
+    /* Styling for the heading */
+    h1 {
+        color: lime;
+        font-size: 6em;
+        font-family: 'Brush Script MT', cursive, sans-serif;
+        text-align: center;
+        text-shadow: 2px 2px #000000;
+        animation: swing 1s ease-in-out infinite alternate;
+      }
+      
+    /* Keyframes for the heading animation */
+    @keyframes swing {
+    0% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+    }
+    
+    /* Styling for footer */
+    footer {
+        justify-content: space-between;
+        background-color: black;
+        color: lime;
+        padding: 10px;
+        font-family: 'Montserrat', sans-serif;
+      }
+      /* Styling for footer contact section */
+      .footer-contact {
+        margin-bottom: 20px;
+      }
+      /* Styling for list items inside footer contact section */
+      .footer-contact ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.2rem;
+      }
+      /* Styling for list items inside footer contact section */
+      .footer-contact ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      /* Styling for icons inside list items */
+      .footer-contact ul li i {
+        margin-right: 10px;
+        font-size: 1.5rem;
+      }
+      /* Styling for footer text */
+      .footer-text {
+        font-size: 1.2rem;
+        color: lime;
+        text-align: center;
+      }
+</style>
+    <!-- This line displays the artist's name in a large header -->
+    <h1>Emcee Code</h1>
+    <!-- This line displays the information or bio of the artist -->
+    <p>Emcee Code is a rising star in the world of hip hop. Born and raised in Virgina, Free State, he has been making music since the age of 16. Known for his smooth flow and insightful lyrics, Emcee Code has already gained a strong following among fans of underground hip hop.
+       Emcee Code has always had a deep love for music, having grown up in a household where it was constantly playing. His parents were both music enthusiasts and exposed him to a wide range of genres, from soul to rock to jazz.It was during his teenage years that Emcee Code discovered his passion for hip hop. He was drawn to the raw, honest expression that the genre allowed for and began writing his own rhymes.</p>
+    
+       <p>At first, Emcee Code kept his music to himself, unsure if he was good enough to share it with others. But after performing at a local open mic night and receiving an overwhelmingly positive response, he realized that he had something special.From there, Emcee Code began honing his craft and networking within the underground hip hop scene. He was soon collaborating with other artists and gaining a following of fans who appreciated his unique style.
+        His debut album, "Code Red", was released in 2022 and features collaborations with some of the hottest up-and-coming producers in the game. The album showcases Emcee Code's versatility as an artist, with tracks ranging from hard-hitting bangers to introspective ballads.
+        Emcee Code is also a passionate philanthropist and runs the Emcee Code Foundation, which focuses on providing mentorship and resources for young aspiring musicians in underserved communities.
+        Despite his success, Emcee Code remains humble and grounded. He is constantly pushing himself to improve as an artist and to use his platform for good.</p>
+    
+    <p>When he's not making music or touring, Emcee Code can often be found volunteering at his local community center, working with kids to help them develop their creativity and self-expression.
+        Emcee Code's fans appreciate not only his musical talent, but also his authenticity and commitment to making a positive impact in the world.
+        Stay tuned for more updates on Emcee Code's upcoming tour, including his stop in Suncity Rustenburg!.
+        As he continues to grow and evolve as an artist, there's no doubt that Emcee Code will continue to make waves in the hip hop world and beyond.
+        So keep an eye out for Emcee Code, whether he's dropping new music, hitting the road on tour, or giving back to his community through the Emcee Code Foundation.
+        And if you haven't already checked out his debut album, "Code Red," do yourself a favor and give it a listen. You won't be disappointed.</p> 
+    <!-- This is the opening of a div container with class "image-wrapper" -->
+    <div class="image-wrapper">
+        <!-- This div is used to make the contents inside span the full width of the container -->
+        <div style="width:100%">
+            <!-- This div is used to display the first image with a width of 25% and float left -->
+            <div style="width:25%; float:left">
+                <!-- This is the image tag with a source and alternate text -->
+                <img src="https://www.dropbox.com/s/2jzkhhv2gih2h0s/karsten-winegeart-pJ6HTjx-LV0-unsplash.jpg?raw=1" alt="Emcee Code" style="max-width: 70%;">
+            </div>
+            <!-- This div is used to display the second image with a width of 25% and float left -->
+            <div style="width:25%; float:left">
+                <img src="https://www.dropbox.com/s/0udiml0tgcq11uq/karsten-winegeart-X2reytV0chs-unsplash.jpg?raw=1" alt="Emcee Code" style="max-width: 70%;">
+            </div>
+            <!-- This div is used to display the third image with a width of 25% and float left -->
+            <div style="width:25%; float:left">
+                <img src="https://www.dropbox.com/s/y9pp8775yg410yk/lawless-capture-STdt0puik_8-unsplash.jpg?raw=1" alt="Emcee Code" style="max-width: 70%;">
+            </div>
+            <!-- This div is used to display the fourth image with a width of 25% and float left -->
+            <div style="width:25%; float:left">
+                <img src="https://www.dropbox.com/s/y1z2fp8a3kvgv10/karsten-winegeart-urbseZKkXLY-unsplash.jpg?raw=1" alt="Emcee Code" style="max-width: 70%;">
+            </div>
+        </div>
+    </div>
+    <!-- This is the footer section -->
+    <footer>
+        <!-- This div contains contact information and is styled with class "footer-contact" -->
+        <div class="footer-contact">
+          <ul>
+
+            <li><i class="fa fa-envelope"></i> info@emcee_code.com</li>
+            <li><i class="fa fa-phone"></i> (+27) 57 456 3210</li>
+            <li><i class="fa fa-map-marker"></i> 64 Helpmekaar St, Virginia, South Africa</li>
+          </ul>
+        <!-- This paragraph tag displays the copyright information -->
+        </div>
+        <p style="text-align: center;">© 2023 CodeNoSleep | All rights reserved.</p>
+      </footer>
+<!-- This line ends the block of code defined in the parent template -->
+{% endblock %}

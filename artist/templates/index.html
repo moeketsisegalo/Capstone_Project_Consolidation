@@ -1,0 +1,150 @@
+<!-- Define document type as HTML -->
+<!DOCTYPE html>
+<html>
+<!-- Start of head section -->
+<head>
+    <!-- Import font-awesome CSS library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Import bootstrap CSS library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- Define title of the page -->
+    <title>{% block title %}{% endblock %}</title>
+     <!-- Internal Style CSS -->
+    <style>
+
+        nav {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+   
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-grow: 1;
+        } 
+        
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+      
+        nav li a:hover {
+            background-color: lime;
+
+        }
+       
+        nav h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 30px;
+        }
+       
+        body {
+            background-size: cover;
+            color: white;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 1px solid white;
+            box-sizing: border-box;
+        
+        }
+
+        body.body-border {
+            border: 10px solid white;
+            padding: 20px;
+        }
+   
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: black;
+            border: 2px solid black;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .social-icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* add this property */
+            margin: 0;
+            padding: 0;
+          }
+  
+          .social-icons li {
+            list-style: none;
+            margin-right: 10px;
+          }
+ 
+          .social-icons a {
+            color: lime;
+          }
+          {% comment %} this media query targets screens with a maximum width of 768 pixels  and changes the layout of the navigation bar to a vertical list of links. {% endcomment %}
+          @media only screen and (max-width: 768px) {
+            nav {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            nav ul {
+              flex-direction: column;
+              align-items: center;
+            }
+            nav li {
+              margin-right: 0;
+              margin-bottom: 10px;
+            }
+          }
+          
+    </style>
+</head>
+<body>
+    <!-- navigation bar containing social icons and links to pages -->
+    <nav>
+        <ul class="social-icons">
+             <!-- links to social media pages -->
+            <li><a href="https://www.facebook.com/yourPage"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.twitter.com/yourPage"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/yourPage"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/yourPage"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+            <!-- links to pages of the website -->
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'albums' %}">Albums</a></li>
+            <li><a href="{% url 'tours' %}">Tour</a></li>
+            <!-- show Logout link if user is logged in, otherwise show Login link -->
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <!-- main content of the webpage -->
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

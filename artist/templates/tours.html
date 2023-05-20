@@ -1,0 +1,52 @@
+ <!-- Extends index template index.html -->
+{% extends 'index.html' %}
+<!-- Define content block -->
+{% block content %}
+<!-- Add a heading 'Tour Dates' -->
+<h1>Tour Dates</h1>
+{% comment %} Internal style CSS {% endcomment %}
+<style>
+    body {
+        background-image: url('https://www.dropbox.com/s/mwdqzza14nhwjh1/danny-howe-bn-D2bCvpik-unsplash.jpg?raw=1');
+        background-size: cover;
+        color: white;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 1px solid white;
+        box-sizing: border-box;
+        
+    }
+    body.body-border {
+        border: 10px solid white;
+        padding: 20px;
+      }
+    ul {
+    list-style-type: none;
+    padding: 0;
+    }
+    li {
+        background-color: BLACK;
+        border: 2px solid black;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      
+</style>
+{% comment %} Creates an unordered list {% endcomment %}
+<ul>
+{% comment %} Add a class for the body element {% endcomment %}
+<body class="body-border">
+{% comment %} Starts a loop through a list of tours  {% endcomment %}
+{% for tour in tours %}
+{% comment %} Displays information about the list of tours {% endcomment %}
+<li>{{ tour.title }} in {{ tour.location }} from {{ tour.start_date|date:"F j, Y" }} to {{ tour.end_date|date:"F j, Y" }}</li>
+{% comment %} end the Loop {% endcomment %}
+{% endfor %}
+</ul>
+{% comment %} Ends the block of content  {% endcomment %}
+{% endblock %}
+

@@ -1,0 +1,109 @@
+{% extends 'index.html' %}
+{% comment %} The title of the page is set to "Login" {% endcomment %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <!-- The following HTML code displays the login form -->
+  <h1>Login</h1>
+  <form method="post" class="login-form">
+    {% csrf_token %}
+      <!-- The following code displays any form errors -->
+    {% if form.errors %}
+      <ul class="error-list">
+        {% for error in form.non_field_errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+        {% for field in form %}
+          {% for error in field.errors %}
+            <li>{{ field.label }}: {{ error }}</li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+      <!-- The following code displays the username input field -->
+    <div class="form-group">
+      <label for="{{ form.username.id_for_label }}">Username:</label>
+      {{ form.username }}
+    </div>
+      <!-- The following code displays the password input field -->
+    <div class="form-group">
+      <label for="{{ form.password.id_for_label }}">Password:</label>
+      {{ form.password }}
+    </div>
+    <!-- The following code displays the login button -->
+    <button type="submit">Login</button>
+  </form>
+  <br>
+  <!-- The following code displays a message with a link to the registration page -->
+  <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+  <style>
+    {% comment %} internal style css {% endcomment %}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://www.dropbox.com/s/9j4037bkvbk0b9m/anthony-intraversato-xr43RescWSA-unsplash.jpg?raw=1");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button[type="submit"] {
+      background-color: lime;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 50%;
+      font-size: 16px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      color: #4CAF50;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .error-list {
+      color: red;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  </style>
+{% endblock %}
