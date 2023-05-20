@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module: artist.models &mdash; Artist 00.00.01 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module: artist.views" href="views.html" />
+    <link rel="prev" title="Welcome to Artist’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Artist
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module: artist.models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#artist.models.Album"><code class="docutils literal notranslate"><span class="pre">Album</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Album.DoesNotExist</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Album.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.artist"><code class="docutils literal notranslate"><span class="pre">Album.artist</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.description"><code class="docutils literal notranslate"><span class="pre">Album.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.get_next_by_release_date"><code class="docutils literal notranslate"><span class="pre">Album.get_next_by_release_date()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.get_previous_by_release_date"><code class="docutils literal notranslate"><span class="pre">Album.get_previous_by_release_date()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.id"><code class="docutils literal notranslate"><span class="pre">Album.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.objects"><code class="docutils literal notranslate"><span class="pre">Album.objects</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.release_date"><code class="docutils literal notranslate"><span class="pre">Album.release_date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Album.title"><code class="docutils literal notranslate"><span class="pre">Album.title</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#artist.models.Tour"><code class="docutils literal notranslate"><span class="pre">Tour</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Tour.DoesNotExist</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Tour.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.description"><code class="docutils literal notranslate"><span class="pre">Tour.description</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.end_date"><code class="docutils literal notranslate"><span class="pre">Tour.end_date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.get_next_by_end_date"><code class="docutils literal notranslate"><span class="pre">Tour.get_next_by_end_date()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.get_next_by_start_date"><code class="docutils literal notranslate"><span class="pre">Tour.get_next_by_start_date()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.get_previous_by_end_date"><code class="docutils literal notranslate"><span class="pre">Tour.get_previous_by_end_date()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.get_previous_by_start_date"><code class="docutils literal notranslate"><span class="pre">Tour.get_previous_by_start_date()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.id"><code class="docutils literal notranslate"><span class="pre">Tour.id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.location"><code class="docutils literal notranslate"><span class="pre">Tour.location</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.objects"><code class="docutils literal notranslate"><span class="pre">Tour.objects</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.start_date"><code class="docutils literal notranslate"><span class="pre">Tour.start_date</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#artist.models.Tour.title"><code class="docutils literal notranslate"><span class="pre">Tour.title</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Module: artist.views</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Artist</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Module: artist.models</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-artist.models">
+<span id="module-artist-models"></span><h1>Module: artist.models<a class="headerlink" href="#module-artist.models" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="artist.models.Album">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">artist.models.</span></span><span class="sig-name descname"><span class="pre">Album</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">artist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">release_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/artist/models.html#Album"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#artist.models.Album" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="artist.models.Album.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#artist.models.Album.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="artist.models.Album.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#artist.models.Album.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Album.artist">
+<span class="sig-name descname"><span class="pre">artist</span></span><a class="headerlink" href="#artist.models.Album.artist" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Album.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#artist.models.Album.description" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="artist.models.Album.get_next_by_release_date">
+<span class="sig-name descname"><span class="pre">get_next_by_release_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">release_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#artist.models.Album.get_next_by_release_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="artist.models.Album.get_previous_by_release_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_release_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">release_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#artist.models.Album.get_previous_by_release_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Album.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#artist.models.Album.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Album.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#artist.models.Album.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Album.release_date">
+<span class="sig-name descname"><span class="pre">release_date</span></span><a class="headerlink" href="#artist.models.Album.release_date" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Album.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#artist.models.Album.title" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="artist.models.Tour">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">artist.models.</span></span><span class="sig-name descname"><span class="pre">Tour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/artist/models.html#Tour"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#artist.models.Tour" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="artist.models.Tour.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#artist.models.Tour.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="artist.models.Tour.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#artist.models.Tour.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Tour.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#artist.models.Tour.description" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Tour.end_date">
+<span class="sig-name descname"><span class="pre">end_date</span></span><a class="headerlink" href="#artist.models.Tour.end_date" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="artist.models.Tour.get_next_by_end_date">
+<span class="sig-name descname"><span class="pre">get_next_by_end_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">end_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#artist.models.Tour.get_next_by_end_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="artist.models.Tour.get_next_by_start_date">
+<span class="sig-name descname"><span class="pre">get_next_by_start_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">start_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#artist.models.Tour.get_next_by_start_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="artist.models.Tour.get_previous_by_end_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_end_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">end_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#artist.models.Tour.get_previous_by_end_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="artist.models.Tour.get_previous_by_start_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_start_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">start_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#artist.models.Tour.get_previous_by_start_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Tour.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#artist.models.Tour.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Tour.location">
+<span class="sig-name descname"><span class="pre">location</span></span><a class="headerlink" href="#artist.models.Tour.location" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Tour.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#artist.models.Tour.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Tour.start_date">
+<span class="sig-name descname"><span class="pre">start_date</span></span><a class="headerlink" href="#artist.models.Tour.start_date" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="artist.models.Tour.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#artist.models.Tour.title" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Artist’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="views.html" class="btn btn-neutral float-right" title="Module: artist.views" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Moeketsi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
