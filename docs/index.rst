@@ -12,8 +12,8 @@ Welcome to Artist's documentation!
 
    models
    views
-   urls
-   
+   apps
+
 
 
 
