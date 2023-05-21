@@ -111,6 +111,8 @@ Firs navigate to the root directory of the project
 ```
 docker build -t artist-app .
 ```
+![Build App](capstone_screenshots/build_app.png)
+
 2. Run the Docker container:
 ```
 docker run -p 8000:8000 artist-app
