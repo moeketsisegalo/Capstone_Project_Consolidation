@@ -141,7 +141,9 @@ workon my_django
 ```
 
 ![Mac Users](capstone_screenshots/mac_users.png)
+## Credits
 
+Author: Moeketsi Segalo
 
 ## Contact
 
