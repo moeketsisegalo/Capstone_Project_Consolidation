@@ -69,19 +69,39 @@ To activate the my_django virtual environment, you can use the following command
 ```
 workon my_django
 ```
+
 ## Running the Application
-
 ### Running with venv
-1. Ensure that your virtual environment is active.
-2. Change to the project's root directory:
+### Setting Up the Virtual Environment
+Before running the Django development server, make sure your virtual environment is active. If you haven't set up a virtual environment or installed Django yet, follow these steps:
 
+1. Open a terminal or command prompt.
+2. Navigate to the root directory of your project.
+3. Create a new virtual environment:
+```
+python -m venv venv
+```
+4. Activate the virtual environment:
 
+For macOS/Linux:
+```
+source venv/bin/activate
+```
+For windows:
+```
+venv\Scripts\activate
+```
 
-4. Start the Django development server:
+5. Install Django:
+```
+pip install Django
+```
+
+6. Start the Django development server:
 ```
 python manage.py runserver
 ```
-3. Access your application at http://localhost:8000/.
+7. Access your application at http://localhost:8000/.
 
 ### Running with Docker
 1. Build the Docker image:
