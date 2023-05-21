@@ -59,7 +59,9 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 ```
 source /usr/local/bin/virtualenvwrapper.sh
 ```
-
+```
+workon my_django
+```
 ## Running the Application
 
 ### Running with venv
