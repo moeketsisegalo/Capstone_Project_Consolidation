@@ -37,7 +37,7 @@ git clone https://github.com/moeketsisegalo/capstone_project_consolidation.git
   source venv/bin/activate
   ```
 
-### A NOTE FOR LINUX AND MAC
+### A NOTE FOR MAC USERS
 In order to get your commands working, there are certain commands that need to run when opening your terminal.
 
 ### For MacOS, place the following in your ~/.zshrc:
