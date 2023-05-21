@@ -2,7 +2,7 @@
 
 
 ## Description 
-Django artist application is a web application built using the Django framework. It allows the users to manage and showcase information about
+Django artist application is a web application built using the Django framework. It allows the admin to manage and showcase information about
 the artists such as Tours and Albums.Users can register and login to the webiste.
 
 This README.md file provides instructions on how to build and run your application on different operating systems.
