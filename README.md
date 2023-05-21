@@ -60,12 +60,6 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-### Installing Dependencies
-1. Ensure that your virtual environment is active.
-2. Install the project's dependencies using pip:
-
-
-
 ## Running the Application
 
 ### Running with venv
