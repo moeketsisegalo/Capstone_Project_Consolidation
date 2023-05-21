@@ -1,5 +1,10 @@
 # Artist Web Application
 
+
+## Description 
+Django artist application is a web application built using the Django framework. It allows the users to manage and showcase information about
+the artists such as Tours and Albums.Users can register and login to the webiste.
+
 This README.md file provides instructions on how to build and run your application on different operating systems.
 
 ## Prerequisites
@@ -10,8 +15,10 @@ This README.md file provides instructions on how to build and run your applicati
 
 ### Cloning the Repository
 1. Clone the repository to your local machine:
-git clone <repository_url>
 
+```
+git clone <repository_url>
+```
 
 ### Setting Up a Virtual Environment (venv)
 1. Open a command prompt or terminal.
