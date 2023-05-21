@@ -29,7 +29,7 @@ git clone https://github.com/moeketsisegalo/capstone_project_consolidation.git
 - For Windows:
   ```
   python -m venv venv
-  ``
+  ```
   ```
   venv\Scripts\activate
   ```
