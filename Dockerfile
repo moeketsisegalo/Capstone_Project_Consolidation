@@ -23,6 +23,9 @@ ENV PATH="/env/bin:$PATH"
 # Install the Python dependencies
 RUN pip install -r requirements.txt
 
+# Install Django
+RUN pip install Django
+
 # Copy the rest of the application code to the container
 COPY . .
 
