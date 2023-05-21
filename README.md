@@ -79,7 +79,7 @@ Before running the Django development server, make sure your virtual environment
 2. Navigate to the root directory of your project.
 3. Create a new virtual environment:
 ```
-python -m venv venv
+python3 -m venv venv
 ```
 4. Activate the virtual environment:
 
