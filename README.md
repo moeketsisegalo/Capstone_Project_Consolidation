@@ -119,6 +119,10 @@ docker build -t artist-app .
 ```
 docker run -p 8000:8000 artist-app
 ```
+
+![Run App](capstone_screenshots/run%20app.png)
+
+
 3. Access your application at http://localhost:8000/.
 
 ## Documentation
