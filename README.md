@@ -7,9 +7,12 @@ the artists such as Tours and Albums.Users can register and login to the webiste
 
 This README.md file provides instructions on how to build and run your application on different operating systems.
 
+
 ## Prerequisites
-- Python (version X.X.X)
-- Docker (version X.X.X)
+
+Make sure you have Docker installed on your machine. Docker allows you to run the Django Artist application in a containerized environment.
+If you don't have Docker installed, you can follow the official Docker documentation to install it for your operating system.
+
 
 ## Installation
 
@@ -39,9 +42,7 @@ In order to get your commands working, there are certain commands that need to r
 
 ### For MacOS, place the following in your ~/.zshrc:
 
-
 ### Setting PATH for Python 3 installed by brew if it is not present
-
 ```
 export PATH=/usr/local/share/python:$PATH
 ```
@@ -62,7 +63,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 ### Installing Dependencies
 1. Ensure that your virtual environment is active.
 2. Install the project's dependencies using pip:
-pip install -r requirements.txt
+
 
 
 ## Running the Application
@@ -70,8 +71,9 @@ pip install -r requirements.txt
 ### Running with venv
 1. Ensure that your virtual environment is active.
 2. Start the Django development server:
+```
 python manage.py runserver
-
+```
 3. Access your application at http://localhost:8000/.
 
 ### Running with Docker
