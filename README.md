@@ -17,7 +17,7 @@ This README.md file provides instructions on how to build and run your applicati
 1. Clone the repository to your local machine:
 
 ```
-git clone <repository_url>
+git clone https://github.com/moeketsisegalo/capstone_project_consolidation.git
 ```
 
 ### Setting Up a Virtual Environment (venv)
