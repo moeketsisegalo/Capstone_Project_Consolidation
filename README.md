@@ -77,7 +77,11 @@ workon my_django
 
 ### Running with venv
 1. Ensure that your virtual environment is active.
-2. Start the Django development server:
+2. Change to the project's root directory:
+
+
+
+4. Start the Django development server:
 ```
 python manage.py runserver
 ```
@@ -101,6 +105,12 @@ docker run -p 8000:8000 artist-app
 
 The documentation for this project can be found in the docs folder. To access it, open the index.html file in your web browser.
 
+## Contact
 
-## License
-- Include your license information here.
+If you have any questions or suggestions, feel free to contact me:
+
+**Your Name**
+- Email: moeketsisegalo@gmail.com
+- GitHub: [your GitHub profile URL]
+
+
