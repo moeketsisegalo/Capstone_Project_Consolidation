@@ -101,6 +101,10 @@ pip install Django
 ```
 python manage.py runserver
 ```
+
+![Virtual Environment Setup](capstone_screenshots/virtual_environment_setup.png)
+
+
 7. Access your application at http://localhost:8000/.
 
 ### Running with Docker
