@@ -23,17 +23,15 @@ ENV PATH="/env/bin:$PATH"
 # Install the Python dependencies
 RUN pip install -r requirements.txt
 
-# Install Django
-RUN pip install Django
-
 # Copy the rest of the application code to the container
 COPY . .
 
-# Install Sphinx
-RUN pip install sphinx
+# Install Django, Sphinx, and Sphinx RTD Theme
+RUN pip install --no-cache-dir Django sphinx sphinx-rtd-theme
 
 # Expose the port that the Django application will run on
 EXPOSE 8000
 
 # Define the command to run the Django development server
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+
