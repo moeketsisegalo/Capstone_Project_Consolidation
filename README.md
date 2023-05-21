@@ -44,7 +44,7 @@ git clone https://github.com/moeketsisegalo/capstone_project_consolidation.git
 ### A NOTE FOR MAC USERS
 In order to get your commands working, there are certain commands that need to run when opening your terminal.
 
-### For MacOS, place the following in your ~/.zshrc:
+### For MacOS, place the following in your ~/.zshrc(terminal):
 
 ### Setting PATH for Python 3 installed by brew if it is not present
 ```
