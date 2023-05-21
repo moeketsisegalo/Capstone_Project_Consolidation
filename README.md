@@ -82,11 +82,13 @@ python manage.py runserver
 ### Running with Docker
 1. Build the Docker image:
 
+```
 docker build -t artist-app .
-
+```
 2. Run the Docker container:
+```
 docker run -p 8000:8000 artist-app
-
+```
 3. Access your application at http://localhost:8000/.
 
 ## Configuration
