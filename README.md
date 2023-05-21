@@ -112,7 +112,8 @@ Firs navigate to the root directory of the project
 docker build -t artist-app .
 ```
 
-![Build App](https://github.com/moeketsisegalo/capstone_project_consolidation/blob/master/capstone_screenshots/build%20app.png)
+![Build App](capstone_screenshots/build%20app.png)
+
 
 2. Run the Docker container:
 ```
