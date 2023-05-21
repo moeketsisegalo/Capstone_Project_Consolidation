@@ -19,7 +19,20 @@ This README.md file provides instructions on how to build and run your applicati
 ```
 git clone https://github.com/moeketsisegalo/capstone_project_consolidation.git
 ```
-
+### Setting Up a Virtual Environment (venv)
+1. Open a command prompt or terminal.
+2. Navigate to the project's root directory.
+3. Create a new virtual environment:
+- For Windows:
+  ```
+  python -m venv venv
+  venv\Scripts\activate
+  ```
+- For Mac/Linux:
+  ```
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
 
 ### A NOTE FOR LINUX AND MAC
 In order to get your commands working, there are certain commands that need to run when opening your terminal.
@@ -45,23 +58,6 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 ```
 source /usr/local/bin/virtualenvwrapper.sh
 ```
-
-
-
-### Setting Up a Virtual Environment (venv)
-1. Open a command prompt or terminal.
-2. Navigate to the project's root directory.
-3. Create a new virtual environment:
-- For Windows:
-  ```
-  python -m venv venv
-  venv\Scripts\activate
-  ```
-- For Mac/Linux:
-  ```
-  python3 -m venv venv
-  source venv/bin/activate
-  ```
 
 ### Installing Dependencies
 1. Ensure that your virtual environment is active.
