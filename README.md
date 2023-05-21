@@ -59,6 +59,13 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 ```
 source /usr/local/bin/virtualenvwrapper.sh
 ```
+
+This command will create a new virtual environment named my_django and activate it automatically.
+```
+mkvirtualenv my_django
+```
+
+To activate the my_django virtual environment, you can use the following command:
 ```
 workon my_django
 ```
