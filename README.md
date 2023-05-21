@@ -20,6 +20,34 @@ This README.md file provides instructions on how to build and run your applicati
 git clone https://github.com/moeketsisegalo/capstone_project_consolidation.git
 ```
 
+
+### A NOTE FOR LINUX AND MAC
+In order to get your commands working, there are certain commands that need to run when opening your terminal.
+
+### For MacOS, place the following in your ~/.zshrc:
+
+
+### Setting PATH for Python 3 installed by brew if it is not present
+
+```
+export PATH=/usr/local/share/python:$PATH
+```
+### Configuration for virtualenv
+```
+export WORKON_HOME=$HOME/.virtualenvs
+```
+```
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+```
+```
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+```
+```
+source /usr/local/bin/virtualenvwrapper.sh
+```
+
+
+
 ### Setting Up a Virtual Environment (venv)
 1. Open a command prompt or terminal.
 2. Navigate to the project's root directory.
