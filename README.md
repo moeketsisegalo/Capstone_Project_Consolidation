@@ -1,4 +1,4 @@
-# Your Application Name
+# Artist Web Application
 
 This README.md file provides instructions on how to build and run your application on different operating systems.
 
