@@ -93,5 +93,10 @@ docker run -p 8000:8000 artist-app
 ```
 3. Access your application at http://localhost:8000/.
 
+## Documentation
+
+The documentation for this project can be found in the docs folder. To access it, open the index.html file in your web browser.
+
+
 ## License
 - Include your license information here.
