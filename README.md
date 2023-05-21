@@ -82,6 +82,8 @@ python manage.py runserver
 ### Running with Docker
 1. Build the Docker image:
 
+Firs navigate to the root directory of the project 
+
 ```
 docker build -t artist-app .
 ```
