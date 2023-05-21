@@ -111,6 +111,6 @@ If you have any questions or suggestions, feel free to contact me:
 
 **Your Name**
 - Email: moeketsisegalo@gmail.com
-- GitHub: [your GitHub profile URL]
+- GitHub: https://github.com/moeketsisegalo
 
 
