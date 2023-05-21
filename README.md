@@ -91,16 +91,5 @@ docker run -p 8000:8000 artist-app
 ```
 3. Access your application at http://localhost:8000/.
 
-## Configuration
-- The application may require additional configuration depending on your specific environment. Please refer to the project's documentation for detailed instructions.
-
-## Contributing
-- If you would like to contribute to this project, please follow these steps:
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature-name`.
-3. Make changes and commit them: `git commit -am "Add your changes"`.
-4. Push the branch to your forked repository: `git push origin feature/your-feature-name`.
-5. Submit a pull request.
-
 ## License
 - Include your license information here.
